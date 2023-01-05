@@ -2,23 +2,29 @@ let body=document.getElementById('body');
 let img1=document.createElement('img');
 let img2=document.createElement('img');
 let img3=document.createElement('img');
-let imgs=[img1,img2,img3];
+let img4=document.createElement('img');
+let img5=document.createElement('img');
+let imgs=[img1,img2,img3,img4,img5];
 let currenttop=0;
-let status=[0,0,0];
+let status=[0,0,0,0,0];
 body.appendChild(img1);
 body.appendChild(img2);
 body.appendChild(img3);
+body.appendChild(img4);
+body.appendChild(img5);
 img1.setAttribute('class','depth');
 img2.setAttribute('class','depth');
 img3.setAttribute('class','depth');
+img4.setAttribute('class','depth');
+img5.setAttribute('class','depth');
 function totop(n){
-    for (let i=0;i<3;i++){
-        if ((n+1)%3!==i)
+    for (let i=0;i<5;i++){
+        if ((n+1)%5!==i)
             imgs[i].style.opacity=0;
         else
             imgs[i].style.opacity=1;
     }
-    currenttop=(currenttop+1)%3;
+    currenttop=(currenttop+1)%5;
 }
 imgrequest=(n)=>{
     let url='null'
@@ -63,10 +69,13 @@ totop(0);
 imgrequest(0);
 imgrequest(1);
 imgrequest(2);
+imgrequest(3);
+imgrequest(4);
 body.onclick=()=>{
-if (status[0]+status[1]+status[2]<=1)
-    return;
+if (status[0]+status[1]+status[2]+status[3]+status[4]<=2)
+    alert("阿伟，你太快了")
 else {
+    status[currenttop]=0;
     imgrequest(currenttop);
     totop(currenttop);
 }
