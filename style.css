@@ -6,7 +6,7 @@ h6{
 }
 .depth{
     position: absolute;
-    width: 80%;
+    width: 80vw;
     left: 10%;
     height:auto;
 
@@ -23,7 +23,4 @@ input{
     position: absolute;
     width: 20%;
     left: 40%;
-}
-html{
-    height: 100vh;
 }
