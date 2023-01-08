@@ -72,8 +72,8 @@ imgrequest(2);
 imgrequest(3);
 imgrequest(4);
 body.onclick=()=>{
-if (status[0]+status[1]+status[2]+status[3]+status[4]<=2)
-    alert("阿伟，你太快了")
+if (status[0]+status[1]+status[2]+status[3]+status[4]<=1||(status[(currenttop+1)%5]===0))
+    alert("阿伟，你太快了,下张图还没加载好")
 else {
     status[currenttop]=0;
     imgrequest(currenttop);
