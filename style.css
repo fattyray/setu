@@ -1,11 +1,29 @@
 h6{
     text-align: center;
     color: grey;
+    margin: 0;
+    padding: 0;
 }
 .depth{
     position: absolute;
-    width: 90vw;
-    height: auto;
-    left: 2.5vw;
-    top: 10%;
+    width: 80%;
+    left: 10%;
+    height:auto;
+
+}
+#mbody{
+    position: relative;
+}
+#header{
+    background-color: mistyrose;
+    height: 10vh;
+    position: relative;
+}
+input{
+    position: absolute;
+    width: 20%;
+    left: 40%;
+}
+html{
+    height: 100vh;
 }
