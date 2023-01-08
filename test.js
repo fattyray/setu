@@ -5,7 +5,7 @@ let img3=document.createElement('img');
 let img4=document.createElement('img');
 let img5=document.createElement('img');
 let imgs=[img1,img2,img3,img4,img5];
-let currenttop=0;
+let currenttop=4;
 let status=[0,0,0,0,0];
 body.appendChild(img1);
 body.appendChild(img2);
@@ -65,7 +65,7 @@ imgrequest=(n)=>{
     )
 
 }
-totop(0);
+totop(4);
 imgrequest(0);
 imgrequest(1);
 imgrequest(2);
